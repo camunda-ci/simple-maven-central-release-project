@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.camunda.ci</groupId>
+    <artifactId>simple-maven-central-release-test</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <!-- use camunda-release-parent for releasing to maven central and camunda nexus -->
+    <parent>
+        <groupId>org.camunda</groupId>
+        <artifactId>camunda-release-parent</artifactId>
+        <version>2.5</version>
+        <relativePath />
+    </parent>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git@github.com:camunda-ci/simple-maven-central-release-project.git</connection>
+        <url>scm:git:git@github.com:camunda-ci/simple-maven-central-release-project.git</url>
+        <developerConnection>scm:git:git@github.com:camunda-ci/simple-maven-central-release-project.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <!-- repositories used for distribution of releases and snapshots, DO NOT CHANGE -->
+    <distributionManagement>
+        <repository>
+            <id>camunda-nexus</id>
+            <url>https://app.camunda.com/nexus/content/repositories/spielwiese</url>
+        </repository>
+        <snapshotRepository>
+            <id>camunda-nexus</id>
+            <url>https://app.camunda.com/nexus/content/repositories/spielwiese</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
+
