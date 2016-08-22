@@ -18,7 +18,33 @@
 
     <properties>
         <plugin.version.gpg>1.6</plugin.version.gpg>
+        <gpg.keyname>EBB7707B</gpg.keyname>
     </properties>
+
+    <build>
+        <defaultGoal>clean gpg:sign verify</defaultGoal>
+        <plugins>
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>${plugin.version.gpg}</version>
+            <configuration>
+                <useAgent>false</useAgent>
+                <keyname>${gpg.keyname}</keyname>
+                <passphraseServerId>maven-central-gpg-passphrase</passphraseServerId>
+            </configuration>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+    </build>
 
     <licenses>
         <license>
