@@ -4,7 +4,7 @@
 
     <groupId>org.camunda.ci</groupId>
     <artifactId>simple-maven-central-release-test</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.0.3-test</version>
 
     <packaging>pom</packaging>
 
@@ -27,7 +27,7 @@
         <connection>scm:git:git@github.com:camunda-ci/simple-maven-central-release-project.git</connection>
         <url>scm:git:git@github.com:camunda-ci/simple-maven-central-release-project.git</url>
         <developerConnection>scm:git:git@github.com:camunda-ci/simple-maven-central-release-project.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>0.0.3-test</tag>
     </scm>
 
     <!-- repositories used for distribution of releases and snapshots, DO NOT CHANGE -->
